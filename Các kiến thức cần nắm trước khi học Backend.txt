@@ -1,0 +1,5 @@
+1. Node JS là gì, sao phải dùng Node.js
+2. JavaScript cơ bản
+3. ES6
+4. Design Partem *****
+5. Đồng bộ hay bất đồng bộ
