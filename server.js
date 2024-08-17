@@ -2,7 +2,7 @@
 
 const app = require("./src/app");
 
-PORT = 5055;
+PORT = 5555;
 
 const server = app.listen(PORT, () => {
   console.log(`WSV eCommerce start with ${PORT}`);
@@ -10,5 +10,5 @@ const server = app.listen(PORT, () => {
 
 process.on("SIGINT", () => {
   server.close(() => console.log(`Exit Server Express`));
-//   notify.send(ping...)
+  //   notify.send(ping...)
 });

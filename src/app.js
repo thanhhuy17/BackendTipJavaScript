@@ -16,7 +16,7 @@ app.use(compression()); // Data Low when send
 // morgan("tiny")
 
 // init db
-
+require("./dbs/init.mongodb");
 // init routes
 app.get("/", (req, res, next) => {
   const strCompress = "Huy Ben 99";
