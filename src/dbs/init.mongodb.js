@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const connectString = `mongodb+srv://huymau170819999:DcFvDGaCgreoSSUI@cluster0.whtk0sp.mongodb.net/`;
 
+const { countConnect } = require("../helpers/check.connect");
+
 class Database {
   constructor() {
     this.connect();
@@ -19,7 +21,7 @@ class Database {
 
     mongoose
       .connect(connectString)
-      .then((_) => console.log("Connected Mongodb Success Pro"))
+      .then((_) => {console.log("Connected Mongodb Success Pro", countConnect())})
       .catch((err) => console.log(`Error Connect!`));
   }
 

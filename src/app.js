@@ -17,12 +17,14 @@ app.use(compression()); // Data Low when send
 
 // init db
 require("./dbs/init.mongodb");
+const { checkOverLoad } = require("./helpers/check.connect");
+checkOverLoad();
 // init routes
 app.get("/", (req, res, next) => {
-  const strCompress = "Huy Ben 99";
+  // const strCompress = "Huy Ben 99";
   return res.status(200).json({
     message: "Welcome HuyNguyen!",
-    metadata: strCompress.repeat(10000),
+    // metadata: strCompress.repeat(10000),
   });
 });
 // handling error
